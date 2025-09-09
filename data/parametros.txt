@@ -1,0 +1,22 @@
+# Configurações do Hidrômetro
+
+#Config Pressão
+pressao=2.5
+
+#Config Vazão (m³/s)
+vazao.agua=0.000833
+vazao.maxima=0.00167
+vazao.minima=0.0
+
+#Config Ar
+limite.ar=10.0
+estimativa.ar.maxima=20.0
+limite.deteccao.ar=0.00133
+
+#Config Falta de Água
+probabilidade.falta.agua=0.01
+duracao.minima.falta.agua=5000
+duracao.maxima.falta.agua=7000
+
+#Janela do Hidrômetro (Atualização de Imagem)
+intervalo.atualizacao=1000

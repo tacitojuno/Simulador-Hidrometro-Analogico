@@ -1,0 +1,5 @@
+# Configurações do Hidrômetro
+limite.ar=80.0
+prob.falta.agua=0.1
+intervalo.imagem=2000
+fator.ar=0.7
