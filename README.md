@@ -1,6 +1,8 @@
-# 🌊 Simulador de Hidrômetro Digital
+# 🌊 Simulador de Hidrômetro Analógico
 
-Projeto desenvolvido para a disciplina **Padrões de Projetos** do **IFPB** (Instituto Federal de Educação, Ciência e Tecnologia da Paraíba).
+Primeiro projeto desenvolvido para a disciplina **Padrões de Projetos** do **IFPB** (Instituto Federal de Educação, Ciência e Tecnologia da Paraíba).
+
+![Imagem do Hidrômetro](https://images.steamusercontent.com/ugc/12714535732358554828/71FDD39A8659C6186284B0902D98512A22611111/)
 
 ## 📋 Sobre o Projeto
 
@@ -9,13 +11,15 @@ Sistema de simulação de um hidrômetro digital que replica o comportamento rea
 - **Medição de volume** consumido
 - **Detecção de ar** na tubulação
 - **Simulação de falta d'água**
-- **Monitoramento de pressão** e vazão
+- **Monitoramento** de pressão e vazão de água
 - **Interface gráfica** com imagem de hidrômetro real
-- **Display console** para depuração
+- **Display no console** para depuração
+- **Geração automática de diretório com capturas** numeradas de 01-99 a cada m³
+- **Regulagem manual** do parâmetro de vazão de água em tempo real na janela do simulador
 
 ## 🏗️ Arquitetura do Sistema (UML)
 
-![Diagrama UML](https://www.plantuml.com/plantuml/png/jLZVRjks5xxtK_2NtyMSfV7o1raBemcQEdRh8caofoasB4DnB1qhn2JI9Id3wzg7sNOnx7vla1SRAJ8cJKafqc6vY2Nou-7XuNS-ykYPL21KMUIT_wKuemp9sV7uzRl1-UdvXFn_k3iw60rNNOFprwFnYxlEqVxmO7GGT4w6gt5FHWV39wkkg_5gp4YFskbqvf3y31cI3Iwo7YwXcEUuGPu-dM2YW6Kv7Xs5ZlpQ8VeloK5ASWQKkGRpjrNezow8JFR9fHAKPJ_-jDad2qxJ2lEfywbvkbx2sOncyQn-ZT6yWmfU2aY01_Dl7q--kng_FNzd1zuvGGx9HWeAlfc3W0ALuBAdbch3Zrl01-1diAG5z4dAoscEUj1ERsTdzzl7COoo6in3SbfGXSSYwDzT0w1KUhYY2pWMjHdtB3ISxZWhOvzsdkplUzHSe9J0GokzWzYX4rIO9DgQYDUtRefFOKfpcaAA8yWLr6RVzUZKnj_68q3dl0hvWNQq3ePb7Lp5Q0rDcKAnW9mVgn9o-i4CxHFTQg4UwQaNKgAxwKqb80Hc82vMUzyDAManWe8u5kzBkk339Mf6yXfeAqFrrjF4zDkmD20eQqUSEeAqT0zZUhJFPCdHrdzXQT7cHSIADYEDX6W1dqHyy62poOrGM7uMEcwWWW5IfZwhAIBMiL0OGprvILF1AtQ4Qf9mfY3bmZ9r4Bm5lAPodiClVN9Y7tmFCYKWrGE7zY6qwwbgxFgtEFVDajkKnkPzEoOMcpRCp8IVfKveffpd24o3TBl4C2LfGdazS-ivVYz6cAcAFfbKlxvT9ZUObZaABThkCTMfc9IAYqjD09fWGzBxVUjkHguQhhHdlOU9IrgKkV6xZe1vJXCG0ou4sZJHs-AbrgU17-58AkxOKZFg8M6grs4B57H64xC4AI73meBS_dYShDmtywKquIZhmcLEFT6iPpml2tp35UJjAkCeTf_Cn91sIOiWdwh_GIA6IHQcui9xsiPZXSMSZokMHZAoNUR60oyWCS2x6yuVK6eBKcENWOtOEWqUaQOq-u9u2vIe_5OrHyYfIHWSxqshJ4JT3z8Yxw2Rkzi-A0YPTEonmMeDY_H7LUHgwmdye1El_NmeQNmwN8qRpWOdx670PrmKKF74pQdb7nDQG3wgUXf2jyfwPwuR7YwUIH6nR4GUn3JldjSWcprd-tw4kna7seqAHK4PY4kbVPNTB_J4swrJznKmpA7vhBrPjVQ9HppipDGEcVFZZVdnhRGmwlaoiF-ydCrGO3esFHwOmnJpggtearUdvgrfo-jx_UMiY2FIRGx38zA-_8Qhhbt3Sv3OSkXP9bOtgnaahIWHA6RRENQ_dHGbiXjDUaYvDDQex6PxQP-y432_eOdSEsaTSy6rNIfuRSGZOldSolyvbpG1Vey1f4l-VNM7jCy_kEUKPbHnzvBmOYveWSor-7d-kvo9x0xulpGzu3aNqLNWlbtTmYMTKj6jLUrV4LSVaHGz6s__lFs34rmg58ntR9RxAzURfT82Ew96MrskExyFNObgzQu7MGc7OMNhsekgFZWCwt3NGPdhg1fjZTi3SRYgjNqyTFETeRreGEhg7pCoB8RNwk1UTK5U-MWBO7VLTOw445lsXX1OHf37Tv1LcTi3loU7fi2r8PzW3jMreoAXx5IVMxQtZy9wfKyIGS5tXTeGTzOLs04wGTFNszjhrp23qQ-tVnKnoXrbxG1tNsW6D3XRIksA6zJQ7w-X7X0-bIQiTMIRoRMsNkyeud2VE6KrU_AQAv2QygOqgFWbEumh98hF2P-jEp8m2O6QJfGbT0uvUL-QvE4YHGRN38YzlDiiIZanwd_xTpNQ6XKqkr76RBGXjcOXd1IO0AEoC6bvpKoKZVJh5wUHraoEiygAtmzZJt1jOWxYzdUxrCe4EeWHd2gtRShgnqrhQygLueMnra2crL50Cd7xcobVZ8fUCti6rvVeu-Qvv6qeN9gqk6RciYIv5hGeAj5U3kmkXMkwPdfEg9JBwvJUnLFCaALWnKoWxEHLWpLTvUR7GsrUc9yBICoi7srpy2bKl_Zxf0VuhvOE4d_c392JOGjEU7jNuqPCIJL2-smzxppJ_yeY_mS0)
+![Diagrama UML](https://www.plantuml.com/plantuml/png/jLZVRYEtzRxNK_3dc_Lcr_-HNri33QB8NiSBE-lQtaMB832EXaSoMmuvFUG8Qe9zZbvlUr4qztq2lLX93YMEXZDgkqM3OAqXFvu_Xn-_mvclZGMoTIdPWoXh2LpJqxU2aoxHadvwVtip6lqVnvbGoEul9u_ZxwvkBbaXmPZHg8BY3p17jgTfVeXBA2k9U-od4MEiWR1R4CeFnFzUbUvv7sXkpjc39Q7ct__myfmjjE01yt7qiT_gOQ7LJCotZK_2M4rGW6uvEHZV_-RzzOTtJvDttxsvlbfxOhzcUnmi75L04B8pXtPfzzAw1Vm8-XQMeeHpndKzbUWM7HyU7v_y_o-wCA4oM898KGgBOshDdsm1q5Ytt8e5Z2dpU9gWQtVZUTsDwVYNPsS9LH4Q0xfjvV3BRa0NQB4ed3NgvhTjIazXAgJWmF4DI0kPzvE4vg7-iHujjDIXv5-wG7CmB7DmgD4MMYYBj02fnxO6ANw4mYVeHYCq8UT8G1EehBFlg3NLMY8e1xDKOu_100NJtfvMoHDTsmpRVvaC5K24Sw2x3PNs4utN6190O_fZBHRwSecEnJe3lPgZ_P1Ov-PZH3q8eOOHDv5l0zEN6Tk6FGMk3StVDIpR6KKYsQ2HFduDW2zoUaMmvqmEJUJQ1RtkOPO72cKJJfYhDgtyV2HMPgjDgauYkoIDEcgPXBSjPuLMrkjoSrGchQU4uS9K4lvqpYwQ7sa6bINWRk5bywDjDv7RsqrFNV7nHSgahYqymvXCxOOmCxzXYaUbIoVOZPkj8omAeNFfo4Lc9wRKt155kPW3vJE7MLDGEz8Z7tTvpkx3tpHkYcVajKHoBIZ-v4u9YjfgUa1QY09xD2UH82fEojjJTLXq4eoQNbw0pX5GIL40JJGHDgSqPBZEBP4thOXdXDRKoumcI5jfSjW2ISn4uLCm1kPO1b1-genJebJsxG0p2ULeWaEwtUnfxjduWeGCk2Wqcbo9Ao2WVe7MiYxnKLkGEsNJrs2tRkw2T2gNGOIvtUPijt8Vmxz9JRQKegqdYvJF4ACjbfM-3aUjevu7jVHn9jrCWBnv9lyjAhy2xkqgQEgwlRklMPzMVCQk41gqQKFxAnGbiLsS5CsGrWrCxnRKl3hHz_xmefVvWVWNHy6a3jq9TV3YiPkm_tOlgyLs9tiB2YNqzxFdpUWvIuZ_h2zPKNfPVVH_qgWelQXysxB_JJsR8I6_zZC9A66ACemvsNvxuvzQdKXJ2O6vhfrYuOpADs6e3n8BbIFRnqKtP8qt2RwBGC5e19hDPJT1RiUFzzUJzpVZzclDwV7fsSd9gRjhd_rgBs7lnW-FuwVRoulhoRlBXxYWxwHsTsk_VujUinrapI_7JNs_0OEv7hVQMRW_pQ0OH55BR8PQpsux70sgPw0BuDfuQyBipq_vERiYg9v5OKul1jVSQMTNaCvMl6QDa0uTiODA6r60tc40nLB_Dcnoy_jtyJSNSs5rV2XqMP4eKSMHdaWjKYaKq8C5MvkkeYOfs2cnYHwPtOd-BqrFjDJKwRMxTZNT51v0BjPKwklEj9vyUtTvbTifmaaAznBWgV_cif1UsUv0A9I-UP6Mk179jtVWXfDhN8gfsDrVrfTnzjDdA4Voj65uDBVVVY58fV_ChV7HP-6bgrx3yTkpd2V_8_wbHlE2tQE4S5K8x3UZy3NfuE2hzelIEVExbgRQefHDPcqf0aQjeIyE3hQkJXxZ7bT_Bxkek1_3WDZZUm5zmTR6XH8N3SvdEMG5qLE3j80CEMZoXUDWXOglVbQ50CDmQP4KcD4M-F3mg_ulQCwCNFtCeFdMaRiD2mqLHoK8TKHeT4q5cYFV6XBigEdUJxDQSNrOgRct6ti9Q-O6JDyY5wk_hVw1vkdxJN_yuUYBmzzN6AnucM1H2inefBH5PdN5z8nvQWJAUPdMZ2F3M7_tV_Ekv4p_LGVCH6lYg82bzXKc6TScwBHMRZMQ4IhEl9VeYyJysNflsMLc4lEhW5P_QKhgZArB6JUYWNu0gGcDWtBoFWrkOCe_ur8OAwWnImAIaURZ4uFQQd_iYd2Si1kan9cFiNibYqBeJmEhIAX2L21zSPfNgbISAoJqz67scH2uyRMCqfLGyIkpFm_hFMCEBGpR3ny067-n-ZIluJK3UjdiYzSMYwo8WinAK7M8m2kUDzl9OwgjozDdadqg6HTry1v4pI71e9jdM4PJRFLd5bvzrfaRmJrrAgG2bSyb94LC0RFrT2lzUpHecnglFbbHQAOqaoB4xaQMeimYZHJiaZgOszncs9nMdtmhJDLlSccNrgSG0lV5bEljY7Cf9c0Sqpb8kvkgkX30ZFHP3t8ugbudIXvso7XJ5P1tDAqRBM_wMep5qlhjJtgUhpjP05x4FXAXpg89_SG3ZJ0kFsW5zRNxMPVodm00)
 
 ### 🏛️ Arquitetura em Camadas
 
@@ -126,6 +130,10 @@ simulador-hidrometro/
 │               └── imagem_fundo.png            # ← Imagem do hidrômetro
 ├── data/                                       # Dados de configuração
 │   └── parametros.txt                          # ← Configurações do sistema
+├── MEDICOES/                                   # Imagens geradas automaticamente
+│   ├── 00.jpeg                                 # ← Capturas 01-99 por m³
+│   ├── 01.jpeg
+│   └── ...
 ├── build/                                      # Arquivos gerados (Gradle)
 │   ├── classes/                                # Classes compiladas
 │   └── libs/                                   # JARs gerados
@@ -166,7 +174,9 @@ duracao.minima.falta.agua=5000          # 5 segundos
 duracao.maxima.falta.agua=7000          # 7 segundos
 
 # Interface
-intervalo.atualizacao=1000              # 1 segundo
+intervalo.atualizacao=1000            # 1 segundo
+gerar.capturas=true                   # Habilitar/Desabilitar captura de imagens
+intervalo.capturas=1.0                # 1 m³
 ```
 
 ## 🔗 Principais Relacionamentos Explicados
@@ -238,15 +248,17 @@ props.load(new FileInputStream("data/parametros.txt")); // ← Lê arquivo
 - **Horário** atual
 - **Status** do sistema
 
-## 🔧 Funcionalidades
+## 🎛️ Controle de Regulagem Manual:
+- **Slider de ajuste** para vazão de água em tempo real
 
-### Simulação Realística:
+## 🔧 Funcionalidades
 
 1. **Contagem de volume** baseada em vazão × tempo
 2. **Detecção automática** de ar na tubulação
 3. **Simulação aleatória** de falta d'água
 4. **Variação natural** de pressão e vazão
 5. **Reset automático** quando atinge limite máximo
+6. **Geração de diretório** que armazena capturas da janela do hidrômetro a cada m³
 
 ## 🧪 Testando o Sistema
 
@@ -257,6 +269,8 @@ props.load(new FileInputStream("data/parametros.txt")); // ← Lê arquivo
 3. **Detecção de ar** - Durante/após falta d'água
 4. **Reset automático** - Deixe atingir 999.999 m³
 5. **Configuração personalizada** - Modifique `parametros.txt`
+6. **Geração de imagens** - Verifique pasta `MEDICOES/`
+7. **Ajuste manual** - Use slider para alterar vazão
 
 ## 🐛 Solução de Problemas
 
@@ -299,12 +313,13 @@ java -version
 ./gradlew wrapper --gradle-version 8.5
 ```
 
-## 📚 Padrões de Projeto Utilizados
-
-- **Singleton** (implícito em Configuracao)
-- **Observer** (JanelaHidrometro observa Hidrometro)
-- **Strategy** (diferentes comportamentos por estado)
-- **Facade** (Hidrometro simplifica acesso ao sistema)
+#### `Controles de regulagem não respondem`
+````bash
+# Verifique se:
+1. A simulação não está pausada
+2. Os valores estão dentro dos limites válidos estabelecidos no arquivo de parametros.txt
+3. A interface foi inicializada corretamente
+````
 
 ## 👥 Contribuindo
 
@@ -316,8 +331,8 @@ java -version
 
 ## 📄 Licença
 
-Este projeto foi desenvolvido para fins acadêmicos no **IFPB**.
+Projeto desenvolvido para fins acadêmicos no **IFPB (Instituição Federal de Ciência e Educação da Paraíba).**
 
 ---
 
-**Desenvolvido com JAVA☕ para a disciplina Padrões de Projetos - IFPB**
+**Desenvolvido com JAVA☕ para a disciplina Padrões de Projetos - 2025.2 - IFPB**
