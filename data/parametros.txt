@@ -20,3 +20,7 @@ duracao.maxima.falta.agua=7000
 
 #Janela do Hidrômetro (Atualização de Imagem)
 intervalo.atualizacao=1000
+
+#Configuração de Capturas de Imagens JPEG
+gerar.capturas=true
+intervalo.capturas=1.0
