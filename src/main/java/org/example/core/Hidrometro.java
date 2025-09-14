@@ -19,9 +19,11 @@ public class Hidrometro {
     private double estimativaAr = 0.0;
     private boolean faltandoAgua = false;
 
-    // Controle de duração da falta de água
     private long inicioFaltaAgua = 0;
     private long duracaoFaltaAgua = 0;
+
+    private boolean modoManualVazao = false;
+    private double vazaoManual = 0.0;
 
     private Random random = new Random();
     private ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
@@ -49,7 +51,7 @@ public class Hidrometro {
     }
 
     private double aplicarCorrecaoAr(double vazao) {
-        return vazao * 0.95; // Reduz 5% devido ao ar (Valor abitrário)
+        return vazao * 0.95; //Reduz 5% devido ao ar (Valor abitrário)
     }
 
     private void atualizarContador() {
@@ -79,45 +81,60 @@ public class Hidrometro {
         return vazaoAtual > configuracao.getLimiteDeteccaoAr() || estimativaAr > 5.0;
     }
 
+    public void setVazaoManual(double vazao) {
+        this.vazaoManual = Math.max(0, Math.min(vazao, configuracao.getVazaoMaxima()));
+        this.modoManualVazao = true;
+        entrada.setVazao(vazaoManual);
+
+        System.out.println("Vazão alterada manualmente para: " + vazaoManual + " m³/s");
+    }
+
+    public void desativarModoManual() {
+        modoManualVazao = false;
+        System.out.println("Modo manual desativado. Retornando ao modo automático.");
+    }
+
     private void simularCondicoes() {
         long tempoAtual = System.currentTimeMillis();
 
-        // Verificar se falta de água deve continuar
+        //Verificar se falta de água deve continuar
         if (faltandoAgua) {
             long tempoDecorrido = tempoAtual - inicioFaltaAgua;
             if (tempoDecorrido >= duracaoFaltaAgua) {
                 faltandoAgua = false;
-                System.out.println("⭐ FALTA DE ÁGUA RESOLVIDA após " + (tempoDecorrido/1000) + " segundos");
+                System.out.println("FALTA DE ÁGUA RESOLVIDA após " + (tempoDecorrido/1000) + " segundos");
             }
         } else {
-            // Verificar se deve iniciar nova falta de água
+            //Verificar se deve iniciar nova falta de água
             if (random.nextDouble() < configuracao.getProbabilidadeFaltaAgua()) {
                 faltandoAgua = true;
                 inicioFaltaAgua = tempoAtual;
 
-                // Duração aleatória entre min e max configurados
+                //Duração aleatória entre min e max configurados
                 long duracaoMin = configuracao.getDuracaoMinimaFaltaAgua();
                 long duracaoMax = configuracao.getDuracaoMaximaFaltaAgua();
                 duracaoFaltaAgua = duracaoMin + (long)(random.nextDouble() * (duracaoMax - duracaoMin));
 
-                System.out.println("🚨 INICIADA FALTA DE ÁGUA - Duração prevista: " + (duracaoFaltaAgua/1000) + " segundos");
+                System.out.println("INICIADA FALTA DE ÁGUA - Duração prevista: " + (duracaoFaltaAgua/1000) + " segundos");
             }
         }
 
-        // Aplicar efeitos baseadas no estado (falta ou não de água)
+        //Aplicar efeitos baseadas no estado (falta ou não de água)
         if (faltandoAgua) {
             vazaoAtual = 0;
-            pressaoAtual = Math.max(0, configuracao.getPressao() * 0.2); // Reduz pressão em 80%
+            pressaoAtual = Math.max(0, configuracao.getPressao() * 0.2); //Reduz pressão em 80%
+            entrada.setVazao(vazaoAtual);
         } else {
-            // Variação normal
-            double variacao = (random.nextDouble() - 0.5) * 0.0006;
-            vazaoAtual = Math.max(0, configuracao.getVazaoAgua() + variacao);
+            if (!modoManualVazao) {
+                double variacao = (random.nextDouble() - 0.5) * 0.0006;
+                vazaoAtual = Math.max(0, configuracao.getVazaoAgua() + variacao);
+                entrada.setVazao(vazaoAtual);
+            }
 
             double variacaoPressao = (random.nextDouble() - 0.5);
             pressaoAtual = Math.max(0, configuracao.getPressao() + variacaoPressao);
         }
 
-        entrada.setVazao(vazaoAtual);
         entrada.setPressao(pressaoAtual);
     }
 
@@ -125,9 +142,9 @@ public class Hidrometro {
         scheduler.shutdown();
     }
 
-    // Getters
     public double getVolumeTotal() { return contadorAgua.getVolumeTotal(); }
     public double getVazaoAtual() { return vazaoAtual; }
     public double getPressaoAtual() { return pressaoAtual; }
     public double getEstimativaAr() { return estimativaAr; }
+    public boolean isModoManualVazao() { return modoManualVazao; }
 }

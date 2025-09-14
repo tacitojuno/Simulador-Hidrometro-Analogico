@@ -17,12 +17,12 @@ public class ContadorAgua {
 
         if(deltaTempoSegundos > 0) {
             if (vazao > 0) {
-                // Há água fluindo, sem ar
+                //Há água fluindo, sem ar
                 double volumeAdicionado = vazao * deltaTempoSegundos;
                 volumeTotal += volumeAdicionado;
             } else {
-                // Sem água, mas o ar continua aumentando o contador
-                double percentualArAtivo = Math.max(estimativaAr, 20.0); // Garantir um mínimo de 15% de ar quando não há água
+                //Sem água, mas o ar continua aumentando o contador
+                double percentualArAtivo = Math.max(estimativaAr, 20.0); //Garantir um mínimo de 15% de ar quando não há água
                 double volumeArSomente = (percentualArAtivo / 100.0) * 0.000167 * deltaTempoSegundos;
                 volumeTotal += volumeArSomente;
             }

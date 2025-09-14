@@ -12,7 +12,7 @@ public class Entrada {
     }
 
     public void setVazao(double vazao) {
-        if (vazao >= configuracao.getVazaoMinima() && vazao <= configuracao.getVazaoMaxima()) { // Limite ajustado para m³/s
+        if (vazao >= configuracao.getVazaoMinima() && vazao <= configuracao.getVazaoMaxima()) { //Limite ajustado para m³/s
             this.vazao = vazao;
         }
     }

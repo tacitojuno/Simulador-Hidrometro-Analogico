@@ -10,7 +10,7 @@ public class Display {
         System.out.println("       SIMULADOR HIDROMETRO     ");
         System.out.println("===============================");
 
-        // Formato tradicional: m³|centenas L|dezenas L|décimos L|litros
+        //Formato tradicional: m³|centenas L|dezenas L|décimos L|litros
         String contadorFormatado = formatarContador(contadorAgua);
         System.out.println("Contador: " + contadorFormatado);
 
