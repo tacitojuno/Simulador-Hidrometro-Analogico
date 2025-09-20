@@ -17,11 +17,12 @@ Sistema de simulação de um hidrômetro digital que replica o comportamento rea
 - **Geração automática de diretório com capturas** numeradas de 01-99 a cada m³
 - **Regulagem manual** do parâmetro de vazão de água em tempo real na janela do simulador
 
-## 🏗️ Arquitetura do Sistema (UML)
+## 🏗️ Diagrama de Classe (UML)
 
 ![Diagrama UML](https://www.plantuml.com/plantuml/png/jLZVRYEtzRxNK_3dc_Lcr_-HNri33QB8NiSBE-lQtaMB832EXaSoMmuvFUG8Qe9zZbvlUr4qztq2lLX93YMEXZDgkqM3OAqXFvu_Xn-_mvclZGMoTIdPWoXh2LpJqxU2aoxHadvwVtip6lqVnvbGoEul9u_ZxwvkBbaXmPZHg8BY3p17jgTfVeXBA2k9U-od4MEiWR1R4CeFnFzUbUvv7sXkpjc39Q7ct__myfmjjE01yt7qiT_gOQ7LJCotZK_2M4rGW6uvEHZV_-RzzOTtJvDttxsvlbfxOhzcUnmi75L04B8pXtPfzzAw1Vm8-XQMeeHpndKzbUWM7HyU7v_y_o-wCA4oM898KGgBOshDdsm1q5Ytt8e5Z2dpU9gWQtVZUTsDwVYNPsS9LH4Q0xfjvV3BRa0NQB4ed3NgvhTjIazXAgJWmF4DI0kPzvE4vg7-iHujjDIXv5-wG7CmB7DmgD4MMYYBj02fnxO6ANw4mYVeHYCq8UT8G1EehBFlg3NLMY8e1xDKOu_100NJtfvMoHDTsmpRVvaC5K24Sw2x3PNs4utN6190O_fZBHRwSecEnJe3lPgZ_P1Ov-PZH3q8eOOHDv5l0zEN6Tk6FGMk3StVDIpR6KKYsQ2HFduDW2zoUaMmvqmEJUJQ1RtkOPO72cKJJfYhDgtyV2HMPgjDgauYkoIDEcgPXBSjPuLMrkjoSrGchQU4uS9K4lvqpYwQ7sa6bINWRk5bywDjDv7RsqrFNV7nHSgahYqymvXCxOOmCxzXYaUbIoVOZPkj8omAeNFfo4Lc9wRKt155kPW3vJE7MLDGEz8Z7tTvpkx3tpHkYcVajKHoBIZ-v4u9YjfgUa1QY09xD2UH82fEojjJTLXq4eoQNbw0pX5GIL40JJGHDgSqPBZEBP4thOXdXDRKoumcI5jfSjW2ISn4uLCm1kPO1b1-genJebJsxG0p2ULeWaEwtUnfxjduWeGCk2Wqcbo9Ao2WVe7MiYxnKLkGEsNJrs2tRkw2T2gNGOIvtUPijt8Vmxz9JRQKegqdYvJF4ACjbfM-3aUjevu7jVHn9jrCWBnv9lyjAhy2xkqgQEgwlRklMPzMVCQk41gqQKFxAnGbiLsS5CsGrWrCxnRKl3hHz_xmefVvWVWNHy6a3jq9TV3YiPkm_tOlgyLs9tiB2YNqzxFdpUWvIuZ_h2zPKNfPVVH_qgWelQXysxB_JJsR8I6_zZC9A66ACemvsNvxuvzQdKXJ2O6vhfrYuOpADs6e3n8BbIFRnqKtP8qt2RwBGC5e19hDPJT1RiUFzzUJzpVZzclDwV7fsSd9gRjhd_rgBs7lnW-FuwVRoulhoRlBXxYWxwHsTsk_VujUinrapI_7JNs_0OEv7hVQMRW_pQ0OH55BR8PQpsux70sgPw0BuDfuQyBipq_vERiYg9v5OKul1jVSQMTNaCvMl6QDa0uTiODA6r60tc40nLB_Dcnoy_jtyJSNSs5rV2XqMP4eKSMHdaWjKYaKq8C5MvkkeYOfs2cnYHwPtOd-BqrFjDJKwRMxTZNT51v0BjPKwklEj9vyUtTvbTifmaaAznBWgV_cif1UsUv0A9I-UP6Mk179jtVWXfDhN8gfsDrVrfTnzjDdA4Voj65uDBVVVY58fV_ChV7HP-6bgrx3yTkpd2V_8_wbHlE2tQE4S5K8x3UZy3NfuE2hzelIEVExbgRQefHDPcqf0aQjeIyE3hQkJXxZ7bT_Bxkek1_3WDZZUm5zmTR6XH8N3SvdEMG5qLE3j80CEMZoXUDWXOglVbQ50CDmQP4KcD4M-F3mg_ulQCwCNFtCeFdMaRiD2mqLHoK8TKHeT4q5cYFV6XBigEdUJxDQSNrOgRct6ti9Q-O6JDyY5wk_hVw1vkdxJN_yuUYBmzzN6AnucM1H2inefBH5PdN5z8nvQWJAUPdMZ2F3M7_tV_Ekv4p_LGVCH6lYg82bzXKc6TScwBHMRZMQ4IhEl9VeYyJysNflsMLc4lEhW5P_QKhgZArB6JUYWNu0gGcDWtBoFWrkOCe_ur8OAwWnImAIaURZ4uFQQd_iYd2Si1kan9cFiNibYqBeJmEhIAX2L21zSPfNgbISAoJqz67scH2uyRMCqfLGyIkpFm_hFMCEBGpR3ny067-n-ZIluJK3UjdiYzSMYwo8WinAK7M8m2kUDzl9OwgjozDdadqg6HTry1v4pI71e9jdM4PJRFLd5bvzrfaRmJrrAgG2bSyb94LC0RFrT2lzUpHecnglFbbHQAOqaoB4xaQMeimYZHJiaZgOszncs9nMdtmhJDLlSccNrgSG0lV5bEljY7Cf9c0Sqpb8kvkgkX30ZFHP3t8ugbudIXvso7XJ5P1tDAqRBM_wMep5qlhjJtgUhpjP05x4FXAXpg89_SG3ZJ0kFsW5zRNxMPVodm00)
+- **Feito com [PlantUML](https://plantuml.com/)**
 
-### 🏛️ Arquitetura em Camadas
+### 🏛️ Arquitetura do Sistema em Camadas
 
 O sistema segue arquitetura **MVC (Model-View-Controller)** adaptada:
 
@@ -130,6 +131,8 @@ simulador-hidrometro/
 │               └── imagem_fundo.png            # ← Imagem do hidrômetro
 ├── data/                                       # Dados de configuração
 │   └── parametros.txt                          # ← Configurações do sistema
+├── docs/                                       # Dados de configuração
+│   └── (Diagrama UML) Simulador de Hidrômetro Analógico V2.pdf
 ├── MEDICOES/                                   # Imagens geradas automaticamente
 │   ├── 00.jpeg                                 # ← Capturas 01-99 por m³
 │   ├── 01.jpeg
