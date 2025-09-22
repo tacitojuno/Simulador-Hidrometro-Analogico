@@ -23,4 +23,4 @@ intervalo.atualizacao=1000
 
 #Configuração de Capturas de Imagens JPEG
 gerar.capturas=true
-intervalo.capturas=1.0
+intervalo.capturas=0.01
