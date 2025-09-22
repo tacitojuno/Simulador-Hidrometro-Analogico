@@ -179,7 +179,7 @@ duracao.maxima.falta.agua=7000          # 7 segundos
 # Interface
 intervalo.atualizacao=1000            # 1 segundo
 gerar.capturas=true                   # Habilitar/Desabilitar captura de imagens
-intervalo.capturas=1.0                # 1 m³
+intervalo.capturas=0.01                # 1 m³ no contador |0001|00|
 ```
 
 ## 🔗 Principais Relacionamentos Explicados
