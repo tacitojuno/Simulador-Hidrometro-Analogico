@@ -100,5 +100,5 @@ public class Configuracao {
     public long getDuracaoMaximaFaltaAgua() { return duracaoMaximaFaltaAgua; }
     public int getIntervaloAtualizacao() { return intervaloAtualizacao; }
     public boolean isGerarCapturas() { return gerarCapturas; }
-    public double getIntervaloCaptuas() { return intervaloCaptuas; }
+    public double getIntervaloCapturas() { return intervaloCaptuas; }
 }

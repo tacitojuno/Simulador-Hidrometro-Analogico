@@ -231,7 +231,7 @@ public class JanelaHidrometro extends JFrame {
         }
 
         double volumeAtual = hidrometro.getVolumeTotal();
-        double intervaloCapturas = configuracao.getIntervaloCaptuas();
+        double intervaloCapturas = configuracao.getIntervaloCapturas();
 
         //Atingiu o próximo intervalo de captura?
         if (volumeAtual >= ultimoVolumeCapturado + intervaloCapturas) {
