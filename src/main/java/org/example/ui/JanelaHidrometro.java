@@ -79,7 +79,7 @@ public class JanelaHidrometro extends JFrame {
 
     private void inicializarInterface() {
         setTitle("Hidrômetro Digital - Visualização com Imagem");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(600, 600);
         setLocationRelativeTo(null);
         setResizable(false);
@@ -93,15 +93,6 @@ public class JanelaHidrometro extends JFrame {
 
         //Painel de Controle Manual de Vazão de Água
         add(criarPainelControleVazao(), BorderLayout.SOUTH);
-
-        addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                pararAtualizacao();
-                hidrometro.parar();
-                System.exit(0);
-            }
-        });
     }
 
     private void iniciarAtualizacao() {

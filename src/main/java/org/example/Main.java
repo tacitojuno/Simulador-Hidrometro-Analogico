@@ -1,27 +1,24 @@
 package org.example;
 
-import org.example.config.Configuracao;
-import org.example.core.Hidrometro;
-import org.example.ui.JanelaHidrometro;
-
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Iniciando simulação do hidrômetro...");
+        // Define a quantidade de instâncias
+        final int NUMERO_DE_SIMULADORES = 5;
 
-        Hidrometro hidrometro = new Hidrometro();
-        Configuracao configuracao = new Configuracao();
-        JanelaHidrometro janela = new JanelaHidrometro(hidrometro, configuracao);
+        System.out.println("Iniciando " + NUMERO_DE_SIMULADORES + " simuladores em threads separadas");
 
-        janela.exibir();
-        System.out.println("Interface gráfica iniciada.");
+        for (int i = 0; i < NUMERO_DE_SIMULADORES; i++) {
 
-        try{
-            Thread.sleep(300000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+            // Cria uma nova tarefa do simulador
+            SimuladorRunnable simuladorTask = new SimuladorRunnable();
+
+            // Cria uma nova thread para executar essa tarefa
+            Thread threadDoSimulador = new Thread(simuladorTask);
+
+            threadDoSimulador.setName("Simulador-" + (i + 1));
+
+            // Inicia a thread.
+            threadDoSimulador.start();
         }
-
-        hidrometro.parar();
-        System.out.println("Simulação encerrada.");
     }
 }
