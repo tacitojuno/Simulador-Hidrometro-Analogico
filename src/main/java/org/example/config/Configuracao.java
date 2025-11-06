@@ -88,6 +88,7 @@ public class Configuracao {
         }
     }
 
+    // --- GETTERS (Originais) ---
     public double getVazaoMaxima() { return vazaoMaxima; }
     public double getVazaoMinima() { return vazaoMinima; }
     public double getLimiteAr() { return limiteAr; } //Implementação a se pensar... Provavelmente não utilizado
@@ -101,4 +102,21 @@ public class Configuracao {
     public int getIntervaloAtualizacao() { return intervaloAtualizacao; }
     public boolean isGerarCapturas() { return gerarCapturas; }
     public double getIntervaloCapturas() { return intervaloCaptuas; }
+
+    // --- SETTERS (NOVOS - Necessários para a Fachada) ---
+    public void setVazaoAgua(double vazaoAgua) {
+        this.vazaoAgua = vazaoAgua;
+    }
+    public void setPressao(double pressao) {
+        this.pressao = pressao;
+    }
+    public void setProbabilidadeFaltaAgua(double probabilidadeFaltaAgua) {
+        this.probabilidadeFaltaAgua = probabilidadeFaltaAgua;
+    }
+    public void setIntervaloAtualizacao(int intervaloAtualizacao) {
+        this.intervaloAtualizacao = intervaloAtualizacao;
+    }
+    public void setGerarCapturas(boolean gerarCapturas) {
+        this.gerarCapturas = gerarCapturas;
+    }
 }

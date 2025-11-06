@@ -28,10 +28,22 @@ public class Hidrometro {
     private Random random = new Random();
     private ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 
+    /**
+     * Construtor antigo, agora delega para o novo.
+     */
     public Hidrometro() {
+        // Chama o novo construtor com uma configuração padrão
+        this(new Configuracao());
+    }
+
+    /**
+     * NOVO CONSTRUTOR - Necessário para a Fachada/Runnable.
+     * Recebe o objeto de configuração em vez de criar um novo.
+     */
+    public Hidrometro(Configuracao configuracao) {
         this.contadorAgua = new ContadorAgua();
         this.display = new Display();
-        this.configuracao = new Configuracao();
+        this.configuracao = configuracao; // Usa a configuração injetada
         this.entrada = new Entrada(configuracao);
         inicializarParametros();
         iniciarSimulacao();
@@ -86,23 +98,24 @@ public class Hidrometro {
         this.modoManualVazao = true;
         entrada.setVazao(vazaoManual);
 
-        System.out.println("Vazão alterada manualmente para: " + vazaoManual + " m³/s");
+        System.out.println("[" + Thread.currentThread().getName() + "] Vazão alterada manualmente para: " + vazaoManual + " m³/s");
     }
 
     public void desativarModoManual() {
         modoManualVazao = false;
-        System.out.println("Modo manual desativado. Retornando ao modo automático.");
+        System.out.println("[" + Thread.currentThread().getName() + "] Modo manual desativado. Retornando ao modo automático.");
     }
 
     private void simularCondicoes() {
         long tempoAtual = System.currentTimeMillis();
+        String threadId = Thread.currentThread().getName();
 
         //Verificar se falta de água deve continuar
         if (faltandoAgua) {
             long tempoDecorrido = tempoAtual - inicioFaltaAgua;
             if (tempoDecorrido >= duracaoFaltaAgua) {
                 faltandoAgua = false;
-                System.out.println("FALTA DE ÁGUA RESOLVIDA após " + (tempoDecorrido/1000) + " segundos");
+                System.out.println("[" + threadId + "] FALTA DE ÁGUA RESOLVIDA após " + (tempoDecorrido/1000) + " segundos");
             }
         } else {
             //Verificar se deve iniciar nova falta de água
@@ -115,7 +128,7 @@ public class Hidrometro {
                 long duracaoMax = configuracao.getDuracaoMaximaFaltaAgua();
                 duracaoFaltaAgua = duracaoMin + (long)(random.nextDouble() * (duracaoMax - duracaoMin));
 
-                System.out.println("INICIADA FALTA DE ÁGUA - Duração prevista: " + (duracaoFaltaAgua/1000) + " segundos");
+                System.out.println("[" + threadId + "] INICIADA FALTA DE ÁGUA - Duração prevista: " + (duracaoFaltaAgua/1000) + " segundos");
             }
         }
 
@@ -140,6 +153,7 @@ public class Hidrometro {
 
     public void parar() {
         scheduler.shutdown();
+        System.out.println("[" + Thread.currentThread().getName() + "] Scheduler do hidrômetro parado.");
     }
 
     public double getVolumeTotal() { return contadorAgua.getVolumeTotal(); }
